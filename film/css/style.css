@@ -241,7 +241,7 @@ body {
     color: #fff;
     position: relative;
     z-index: 1; }
-    @media (max-width: 600px) {
+    @media (max-width: 600px) { 
       .main__content {
         padding-top: 70px;
         -webkit-box-pack: start;
