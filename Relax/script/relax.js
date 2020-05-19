@@ -8,7 +8,7 @@ let userSettings = {
 };
 
 setEventListener(getTimersHTML());
-setTimes(document.getElementsByClassName("timers__btn")[0].getAttribute('data-time') * 1000 * 60);
+setTimes(document.getElementsByClassName("timers__btn")[1].getAttribute('data-time') * 1000 * 60);
 
 // =======================
 function setTimes(time){
@@ -43,7 +43,7 @@ function changeActiveBtn(array,activeBtn){
 	setActiveBtn(activeBtn); 
 	setUserSettings("times",activeBtn.getAttribute("data-time"));
 	setTimes(activeBtn.getAttribute("data-time") * 1000 * 60);
-	
+
 }
 
 function setActiveBtn(activeBtn){
@@ -141,7 +141,8 @@ function setVideo(name){
 		default:
 			alert("Ничего нет");
 	}
-	userSettings.playBtn.setAttribute("data-checkedPlay", true); 
-	PlayVideo();
+	userSettings.playBtn.setAttribute("data-checkedPlay", false); 
+	setRadioVideo();
+	video.pause()
 	// setTimes(document.getElementsByClassName("timers__btn active")[0].getAttribute("data-time") * 1000 * 60);
 }
