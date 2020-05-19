@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>Relax</title>
+</head>
+<body>
+  <div class="main-banner">
+    <div class="container">
+      <div class="main-banner__body">
+        <div class="main-banner__title">Meditation</div>
+        <div class="main-banner__row">
+          <div class="main-banner__timers timers">
+            <div class="timers__item">
+              <div class="timers__btn" id="timers-btn" data-time="0.1">6 second</div>
+            </div>
+            <div class="timers__item">
+              <div class="timers__btn active" id="timers-btn" data-time="2">2 minutes</div>
+            </div>
+            <div class="timers__item">
+              <div class="timers__btn" id="timers-btn" data-time="5">5 minutes</div>
+            </div>
+            <div class="timers__item">
+              <div class="timers__btn" id="timers-btn" data-time="10">10 minutes</div>
+            </div>
+          </div>
+          <div class="main-banner__play play"><img class="play__btn" src="image/svg/play.svg" alt="sunny" id="play" data-checkedPlay="data-checkedPlay"/>
+            <div class="play__timer">
+              <div class="play__time" id="timer" data-timer="120000">0:10</div>
+            </div>
+          </div>
+          <div class="weather"><img class="weather__item" src="image/svg/sunny.svg" alt="sunny" data-name="sunny"/><img class="weather__item" src="image/svg/rain.svg" alt="sunny" data-name="rain"/></div>
+        </div>
+      </div>
+    </div>
+    <video class="main-banner__video" src="videos/sunny.mp4" loop="loop" id="video"></video>
+  </div>
+  <link rel="stylesheet" href="style/style.css"/>
+  <script src="script/relax.js"></script>
+</body>

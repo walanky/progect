@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+	meta(charset="UTF-8")
+	title Relax
+body
+	.main-banner
+		.container
+			.main-banner__body
+				.main-banner__title Meditation
+				.main-banner__row
+					.main-banner__timers.timers
+						.timers__item
+							.timers__btn#timers-btn(data-time=0.1) 6 second
+						.timers__item
+							.timers__btn.active#timers-btn(data-time=2) 2 minutes
+						.timers__item
+							.timers__btn#timers-btn(data-time=5) 5 minutes
+						.timers__item
+							.timers__btn#timers-btn(data-time=10) 10 minutes
+					.main-banner__play.play
+						img(src="image/svg/play.svg" alt="sunny").play__btn#play(data-checkedPlay=true)
+						.play__timer
+							.play__time#timer(data-timer=120000) 0:10
+					.weather
+						img(src="image/svg/sunny.svg" alt="sunny" data-name="sunny").weather__item
+						img(src="image/svg/rain.svg" alt="sunny" 	data-name="rain").weather__item
+		video(src="videos/sunny.mp4" loop="loop").main-banner__video#video
+	link(rel="stylesheet", href="style/style.css")
+	script(src="script/relax.js")
