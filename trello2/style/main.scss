@@ -1,0 +1,158 @@
+@import "normalize.scss";
+
+body{
+   font-family: Arial, Helvetica, sans-serif;
+}
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+h1,h2,h3,h4,h5{
+   padding: 0;
+   margin: 0;
+}
+// ==================== Анимации ==============================
+.fadeIn{
+   animation-name: fadeIn;
+   animation-duration: 0.4s;
+}
+@keyframes fadeIn{
+   0% {
+      transform: scale(0);
+   }
+   56% {
+      transform: scale(1.2);
+
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+// ==================== Попапы ==============================
+.popup{
+   display: none; 
+   position: fixed;
+   top:0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(#000,0.5);
+}
+
+.todos__form{
+   background-color: #fff;
+   padding: 14px;
+   border-radius: 4px;
+   display: flex;
+}
+.todos__input{
+   padding: 10px 5px;
+   outline: none;
+   border: none;
+   border-bottom: 1px solid #000;
+   
+}
+.todos__btn{
+   padding: 10px 5px;
+   background: #2271C2;
+   border: none;
+   color: #fff;
+   font-weight: 500;
+   padding: 10px;
+   cursor: pointer;
+   transition: 0.2s;
+   &:hover{
+      background: rgba(#2271C2,0.8);
+   }
+}
+
+.trello{
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+   // background: red;;
+   &__header{
+      background: #2271C2;
+      color: #fff;
+      padding: 10px;
+   }
+}
+
+.todos{
+   flex: 1 1 auto;
+   background: rgba(gray,0.05);
+   &__list{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   &__item{
+      margin: 5px;
+      text-align: center;
+      width: 200px;
+      height: 55px;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+      font-weight: bold;
+   }
+   &__append{
+      border: 5px dashed rgba(gray,0.7);
+      background: rgba(gray,0.5);
+      transition: 0.3s;
+      &:hover{
+         border: 5px dashed rgba(gray,0.8);
+         background: rgba(gray,0.6);
+      }
+   }
+   &__todo{
+      background: #fff;
+      transition: 0.3s;
+      &:hover{
+         box-shadow: 0 0 3px 3px rgba(gray,0.07);
+      }
+   }
+}
+.todo-item{
+   background: rgba(gray, 0.1);
+   margin: 10px;
+   width: 200px;
+   &__title{
+      border-radius: 4px 4px 0;
+      background: rgba(gray, 0.4);
+      padding: 13px;
+      font-weight: bold;
+      margin-bottom: 12px;
+   }
+   &__list{
+      list-style: none;
+      padding: 5px 10px;
+   }
+   &__item{
+      border-radius: 4px;
+      margin-bottom: 10px;
+      background: #fff;
+      padding: 7px 5px 7px 7px;
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover{
+         transform: translate(5px);
+         box-shadow: 0 0 2px 2px rgba(gray, 0.2);
+      }
+   }
+}
+
+.todo-item__footer{
+   padding: 2px 0px 10px 10px; 
+   cursor: pointer;
+   opacity: 0.4;
+   transition: 0.2s;
+   font-size: 12px;
+   &:hover{
+      opacity: 0.6;
+   }
+}  
