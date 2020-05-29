@@ -24,13 +24,12 @@ const todoForm = (todos) => {
                break;
             case "todoLiAppend":
                todoItem = todos[+document.querySelector(".todos").getAttribute("data-number")];
-               let todoNum = +form.getAttribute("data-listnum")
-
+               let todoNum = +form.getAttribute("data-listnum");
                if (!todoItem.step[todoNum].list) {
                   todoItem.step[todoNum].list = [];
                }
                todoItem.step[todoNum].list.push(input.value);
-               todoThisDraw(todos[+form.getAttribute("data-number")]);
+               todoThisDraw(todoItem);
                break;
          }
          // функция из popups.js;

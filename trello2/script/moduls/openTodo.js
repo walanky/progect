@@ -12,7 +12,10 @@ const openTodo = (todos) => {
          todoThisDraw(todo);
          // Ставим свою форму
          document.querySelector("#todoStepAppendForm").setAttribute("data-number", +target.getAttribute("data-todoNumber"));
-         document.querySelector(".todos").setAttribute("data-number", +target.getAttribute("data-todoNumber"))
+         document.querySelector(".todos").setAttribute("data-number", +target.getAttribute("data-todoNumber"));
+         document.querySelector(".todos__back").style.display = "flex";
+         document.querySelector(".todos__settings").style.display = "flex";
+
       }
    })
 }

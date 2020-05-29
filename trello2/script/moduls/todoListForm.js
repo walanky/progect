@@ -1,6 +1,5 @@
 // Этот модуль нужен для того чтобы
 // передовать в форму текущий лист
-
 const todoListForm = () => {
    const todoList = document.querySelector(".todos");
    const todoForm = document.querySelector("#todoLiAppend");

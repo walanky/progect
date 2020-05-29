@@ -6,6 +6,7 @@ const popups = (btnSelector, parentSelector, popupSelector, display = "block") =
    // Создаем события для кнопок
    parent.addEventListener("click", (event) => {
       let target = event.target;
+
       // Если не подерживается событие
       if (!target) return;
       if (target.id == btnSelector) {
@@ -32,4 +33,4 @@ function closePopups() {
 popups("TodoAppend", ".todos", ".todoAppend", "flex");
 popups("TodoStepAppend", ".todos", ".todoStepAppend", "flex");
 popups("todoItemPopup", ".todos", ".todoLiAppend", "flex");
-
+// popups("todos__settings", ".todos", ".todoLiAppend", "flex");
