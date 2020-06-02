@@ -1,19 +1,22 @@
-
 const todo = (todos) => {
-   const todoDel = document.querySelector(".todos__settings");
-   const todoList = document.querySelector(".todos");
+
+
    todoListForm();
    todoForm(todos);
    todoMainDraw(todos);
    openTodo(todos);
 
+   const todoDel = document.querySelector(".todos__settings");
+   const todoList = document.querySelector(".todos");
+
+
    document.querySelector(".todos__back").addEventListener("click", () => {
       todoMainDraw(todos);
       document.querySelector(".todos__back").style.display = "none";
       document.querySelector(".todos__settings").style.display = "none";
+      document.querySelector(".trello__title").innerHTML = "Ваши Туду";
       closePopups();
-   })
-
+   });
 
    // Удаления туду
    todoDel.addEventListener("click", () => {
@@ -23,7 +26,7 @@ const todo = (todos) => {
       document.querySelector(".trello__title").innerHTML = "Ваши Тодо";
       document.querySelector(".todos__settings").style.display = "none";
       document.querySelector(".todos__back").style.display = "none";
-
+      document.querySelector(".trello__title").innerHTML = "Ваши Туду";
       localStorage.setItem("todo", JSON.stringify(todos))
    });
    // Удаления шага в тубу
@@ -32,10 +35,7 @@ const todo = (todos) => {
       if (!target) return;
       if (target.classList.contains("todo-item")) {
          let todoId = +target.querySelector("[data-num]").getAttribute("data-num");
-
-
          todos[+todoList.getAttribute("data-number")].step.splice(todoId, 1);
-
          todoThisDraw(todos[+todoList.getAttribute("data-number")]);
          localStorage.setItem("todo", JSON.stringify(todos))
       }
@@ -59,7 +59,7 @@ const todo = (todos) => {
                break;
             }
          }
-         // ============
+
          todos[+document.querySelector(".todos").getAttribute("data-number")].step[todoId].list.splice(childNum / 2 - 1, 1);
          localStorage.setItem("todo", JSON.stringify(todos));
          todoThisDraw(todos[+document.querySelector(".todos").getAttribute("data-number")]);

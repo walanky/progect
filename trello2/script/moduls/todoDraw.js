@@ -36,7 +36,6 @@ const todoThisDraw = (todo) => {
                   <li class="todo-item__item">${item}</li>
                `;
                }
-
             })
          }
          if (step) {

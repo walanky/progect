@@ -1,9 +1,7 @@
 const openTodo = (todos) => {
    const todoList = document.querySelector(".todos__list");
-
    todoList.addEventListener("click", (event) => {
       let target = event.target;
-
       if (!target) return;
       // Достаем нужный нам туду
       if (target.classList.contains("todos__todo")) {
