@@ -20,6 +20,7 @@ const todo = (todos) => {
 
    // Удаления туду
    todoDel.addEventListener("click", () => {
+
       let todoNum = +todoList.getAttribute("data-number");
       todos.splice(todoNum, 1);
       todoMainDraw(todos);
@@ -27,7 +28,8 @@ const todo = (todos) => {
       document.querySelector(".todos__settings").style.display = "none";
       document.querySelector(".todos__back").style.display = "none";
       document.querySelector(".trello__title").innerHTML = "Ваши Туду";
-      localStorage.setItem("todo", JSON.stringify(todos))
+      localStorage.setItem("todo", JSON.stringify(todos));
+      closePopups()
    });
    // Удаления шага в тубу
    todoList.addEventListener("click", (e) => {
