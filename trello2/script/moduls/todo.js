@@ -38,8 +38,13 @@ const todo = (todos) => {
       if (target.classList.contains("todo-item")) {
          let todoId = +target.querySelector("[data-num]").getAttribute("data-num");
          todos[+todoList.getAttribute("data-number")].step.splice(todoId, 1);
+         target.classList.add("delLeft");
          todoThisDraw(todos[+todoList.getAttribute("data-number")]);
-         localStorage.setItem("todo", JSON.stringify(todos))
+         localStorage.setItem("todo", JSON.stringify(todos));
+         console.log(todoId);
+         // setTimeout(() => {
+         //    target.style.display = "none";
+         // }, 400);
       }
    })
    // Удаления тега в туду 
@@ -47,8 +52,6 @@ const todo = (todos) => {
       let target = e.target;
       if (!target) return;
       if (target.classList.contains("todo-item__item")) {
-         console.log("да да я");
-
          let todoId = target.parentElement.parentElement.querySelector("[data-num]").getAttribute("data-num");
          let childNum = 0;
          let todoList = target.parentElement;

@@ -20,7 +20,10 @@ h1,h2,h3,h4,h5{
 .fadeLeft{
    animation-name: fadeLeft;
    animation-duration: 0.4s;
+   transition: 0.2s;
+   opacity: 1;
 }
+
 @keyframes fadeIn{
    0% {
       transform: scale(0);
@@ -141,6 +144,8 @@ h1,h2,h3,h4,h5{
    margin: 10px;
    width: 200px;
    position: relative;
+   top:0;
+   opacity:1;
    &__title{
       border-radius: 4px 4px 0;
       background: rgba(gray, 0.4);
@@ -167,6 +172,14 @@ h1,h2,h3,h4,h5{
          transform: translate(5px);
          box-shadow: 0 0 2px 2px rgba(gray, 0.2);
       }
+   }
+   &.delLeft{
+      background-color: red;
+      top: -40px;
+      transition: 0.4s;
+      animation-delay: 0.2s;
+      opacity: 0;
+      
    }
 }
 
@@ -207,7 +220,7 @@ h1,h2,h3,h4,h5{
    width: 50px;
    height: 50px;
    justify-content: center;
-   transition: 0.3s;
+   transition: 0.3s; 
    display: none; 
    img{
       width: 30px;

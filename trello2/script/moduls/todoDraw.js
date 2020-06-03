@@ -14,6 +14,7 @@ const todoMainDraw = (todo) => {
    })
    todoList.innerHTML = message;
 }
+
 const todoThisDraw = (todo) => {
    const todoList = document.querySelector(".todos__list");
    let message = `
