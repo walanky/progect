@@ -47,7 +47,7 @@ navigator.sayswho = (function () {
 })();
 
 
-
+alert(navigator.sayswho);
 // ======================
 
 // Наше модальное окно 
