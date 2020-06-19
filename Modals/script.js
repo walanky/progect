@@ -22,7 +22,7 @@ let settings = {
 
    MaxTimeExpectations: 10, // Максимальное время через которое покажеться модальное окно
    MinTimeExpectations: 5, // Минимальное время через которое покажеться модальное окно
-   BrowserTimeOut: ['Chrome 83', 'IE 11'], // Браузера в котором будет таймер
+   BrowserTimeOut: ['Chrome', 'IE'], // Браузера в котором будет таймер
    HideTimerBlock: true, // Скрывать ли timeParent(блок с таймером), после конца таймера (true/false)
 }
 
@@ -45,28 +45,7 @@ navigator.sayswho = (function () {
    if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
    return M.join(' ');
 })();
-
-function browser() {
-   var ua = navigator.userAgent;
-
-   if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
-   if (ua.search(/Firefox/) > 0) return 'Firefox';
-   if (ua.search(/Opera/) > 0) return 'Opera';
-   if (ua.search(/Chrome/) > 0) return 'Google Chrome';
-   if (ua.search(/Safari/) > 0) return 'Safari';
-   if (ua.search(/Konqueror/) > 0) return 'Konqueror';
-   if (ua.search(/Iceweasel/) > 0) return 'Debian Iceweasel';
-   if (ua.search(/SeaMonkey/) > 0) return 'SeaMonkey';
-
-   // Браузеров очень много, все вписывать смысле нет, Gecko почти везде встречается
-   if (ua.search(/Gecko/) > 0) return 'Gecko';
-
-   // а может это вообще поисковый робот
-   return 'adsad';
-}
-alert(browser);
 // ======================
-
 // Наше модальное окно 
 let modals = document.querySelector(settings.modalsSelector);
 // Таймер
@@ -75,7 +54,7 @@ let timerBlock = timerParent.querySelector(settings.timeItemSelector);
 
 // ========Время показана======
 let time = 0;
-if (settings.BrowserTimeOut.indexOf(navigator.sayswho) != -1) {
+if (settings.BrowserTimeOut.indexOf(navigator.sayswho.split(' ')[0]) != -1) {
    time = Math.floor(Math.random() * (settings.MaxTimeExpectations - settings.MinTimeExpectations)) + settings.MinTimeExpectations;
 }
 
