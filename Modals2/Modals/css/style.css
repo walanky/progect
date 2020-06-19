@@ -7,9 +7,7 @@
    min-height: 100vh;
 
 }
-#modal{
-   display: none;
-}
+
 .cat{
    display: block;
    position: relative;

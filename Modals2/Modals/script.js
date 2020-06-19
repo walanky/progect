@@ -2,7 +2,6 @@
 
  МОДАЛЬНОЕ ОКНО
    1) Вставить модально окно там где вы бы хотели чтобы оно появлялось
-   2) Добавить в css 'display: none' модальному окну
    3) дать ему и modalSelector одинаковвый класс и айди (в случае повторения возьмется только самый первый блок)
   
 ТАЙМЕР
@@ -50,6 +49,7 @@ navigator.sayswho = (function () {
 // ======================
 // Наше модальное окно 
 let modals = document.querySelector(settings.modalsSelector);
+modals.style.display = 'none';
 // Таймер
 let timerParent = document.querySelector(settings.timeParentSelector);
 let timerBlock = timerParent.querySelector(settings.timeItemSelector);
