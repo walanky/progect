@@ -45,6 +45,7 @@ navigator.sayswho = (function () {
    if ((tem = ua.match(/version\/(\d+)/i)) != null) M.splice(1, 1, tem[1]);
    return M.join(' ');
 })();
+alert(navigator.sayswho);
 // ======================
 // Наше модальное окно 
 let modals = document.querySelector(settings.modalsSelector);
