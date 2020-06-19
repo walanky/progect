@@ -1,0 +1,30 @@
+.wrapper{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   font-family: Arial, Helvetica, sans-serif;
+   min-height: 100vh;
+
+}
+#modal{
+   display: none;
+}
+.cat{
+   display: block;
+   position: relative;
+   width: 200px;
+   height: 150px;
+   transition: 0.2s;
+}
+.cat:hover{
+   transform: scale(1.03);
+}
+.cat img{
+   position: absolute;
+   top:0;
+   left:0;
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
