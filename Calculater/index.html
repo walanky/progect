@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Калькулятор -Арт декор</title>
+</head>
+
+<body>
+   <!-- Калькулятор -->
+   <section class="calculator">
+      <div class="container">
+         <div class="calculator__wrapper">
+            <h2 class="calculator__title">Калькулятор стоимости работ</h2>
+            <form action="./form.php" class="calculator-form" id='form'>
+               <div class='calculator-form__form'>
+                  <div class="calculator-form__wrapper">
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Кв.м" data-cost='550' name='areal'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Углов в комнате" data-cost='70' name='chandeliers'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Люстры" data-cost='400' name='chandel'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Точечный светильников" data-cost='450' name='lamps'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Корниз" data-cost='1200' name='cornice'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Трубы" data-cost='150' name='pipes'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="number" placeholder="Погонных метров" data-cost='100' name='RunningMeter'>
+                     </div>
+                  </div>
+               </div>
+               <div class="calculator-footer">
+                  <div class="calculator-footer__result-box">
+                     <span class='calculator-footer__text'>Результат: </span>
+                     <span class='calculator-footer__cost'>0 руб.</span>
+                  </div>
+                  <button class='calculator-footer__submit'>Оставить заявку</button>
+               </div>
+               <div class='calculator-popup'>
+                  <div class="calculator-popup__body">
+
+                     <h5 class='calculator-popup__title'>Обратная связь</h5>
+                     <div class="calculator-form__input">
+                        <input type="text" placeholder=" Ваше имя" name='name'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input required type="text" placeholder="Ваш телефон (обязательное поле)" name='phone'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <input type="text" placeholder="Ваш адрес" name='adress'>
+                     </div>
+                     <div class="calculator-form__input">
+                        <textarea name="comment" placeholder="Комментарий"></textarea>
+                     </div>
+                     <button type='submit' class="calculator-form__submit">Отправить заявку</button>
+                     <span class='calculator-popup__subtitle'>*Мы свяжемся с вами в течении 5 минут</span>
+
+                  </div>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="./normalize.css">
+   <script src='./script.js'></script>
+</body>
+
+</html>
