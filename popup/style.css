@@ -16,6 +16,7 @@
 
 }
 .popup-wrapper{
+  
   position: fixed;
   top: 0;
   left:0;
@@ -28,14 +29,18 @@
 }
 .popup-body{
   position: relative;
+  max-height: 100vh;
+  overflow: auto;
   transform: translateY(-30%);
   transition: 0.4s;
   background: #fff;
   padding: 20px;
+  padding-top: 30px;
+
   border-radius: 4px;;
 }
 .popupClose{
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 0;
 }
