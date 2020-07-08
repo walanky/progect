@@ -1,0 +1,41 @@
+.popup{
+  z-index: 999;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.6s;
+}
+.popup.active{
+  transition: 0.3s;
+
+  opacity: 1;
+  visibility: visible; 
+}
+.popup.active .popup-body{
+  transform: none;
+
+}
+.popup-wrapper{
+  position: fixed;
+  top: 0;
+  left:0;
+  right: 0;
+  bottom:0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup-body{
+  position: relative;
+  transform: translateY(-30%);
+  transition: 0.4s;
+  background: #fff;
+  padding: 20px;
+  border-radius: 4px;;
+}
+.popupClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
